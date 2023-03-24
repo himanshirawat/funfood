@@ -1,0 +1,15 @@
+.cardstyle{
+    width: 18rem;
+    max-height: 360px;
+
+}
+
+.card-body > div {
+    width: 100%;
+}
+
+.Price{
+    display: inline;
+    font-size: large;
+    height: 100%;
+}
