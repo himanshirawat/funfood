@@ -8,14 +8,14 @@ export default function Signup() {
 
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        const response = fetch("http://localhost:5000/api/createuser",{
+        const response = await fetch("http://localhost:5000/api/createuser",{
             method:"POST",
-            header:{
+            headers:{
                 'Content-type':'application/json'
             },
             body:JSON.stringify({
                 name:credentials.name,
-                email:credentials.name,
+                email:credentials.email,
                 password:credentials.password,
                 location: credentials.geolocation,
             })
@@ -50,7 +50,7 @@ export default function Signup() {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputaddress" className="form-label">Address</label>
-                    <input type="text" className="form-control" onChange={onChange} name='geolocation' value={credentials.geolocation}id="exampleInputPassword1" />
+                    <input type="text" className="form-control" onChange={onChange} name='geolocation' value={credentials.geolocation}id="exampleInputAddress1" />
                 </div>
                 <button type="submit" className="m-3 btn btn-warning">Submit</button>
                 <Link to="/login" className='m-3 btn btn-danger'>Already a user</Link>
