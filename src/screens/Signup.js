@@ -52,8 +52,8 @@ export default function Signup() {
                     <label htmlFor="exampleInputaddress" className="form-label">Address</label>
                     <input type="text" className="form-control" onChange={onChange} name='geolocation' value={credentials.geolocation}id="exampleInputAddress1" />
                 </div>
-                <button type="submit" className="m-3 btn btn-warning">Submit</button>
-                <Link to="/login" className='m-3 btn btn-danger'>Already a user</Link>
+                <button type="submit" className="m-3 btn bg-warning">Submit</button>
+                <Link to="/login" className='m-3 btn bg-danger'>Already a user</Link>
             </form>
             </div>
         </>

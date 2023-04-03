@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "./Header.css";
+import { Badge } from 'react-bootstrap';
 
 export default function Header() {
 
@@ -42,7 +43,10 @@ export default function Header() {
             </div>
             : 
             <div>
-               <div className='btn'>MyCart</div>
+               <div className='btn'>
+                  MyCart{" "}
+                  <Badge pill bg='danger'>2</Badge>
+                </div>
                <div className='btn'onClick={handleLogout}>LogOut</div>
             </div>
             }
