@@ -6,11 +6,18 @@ const mongoconnect = async()=>{
         else {
             console.log("connected successfully");
             const fetched_data = await mongoose.connection.db.collection("menu");
-            fetched_data.find({}).toArray(function(err,data){
+            fetched_data.find({}).toArray(async function(err,data){
+                const foodCategory = await mongoose.connection.db.collection("category");
+                foodCategory.find({}).toArray(function (err,catData){
+
+                
                 if(err) 
                     console.log(err);
                 else 
-                    console.log();
+                    global.menu = data;
+                    global.category = catData;
+                    // console.log(global.menu)
+              })
             })
 
         }
