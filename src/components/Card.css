@@ -8,6 +8,11 @@
     width: 100%;
 }
 
+.card-img-top{
+    height: 140px;
+    object-fit: fill;
+}
+
 .Price{
     display: inline;
     font-size: large;
