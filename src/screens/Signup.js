@@ -22,7 +22,7 @@ export default function Signup() {
         })
         let [lat, long] = latlong
         console.log(lat, long)
-        const response = await fetch("http://localhost:5000/api/getlocation", {
+        const response = await fetch("https://funfood-example.onrender.com/api/getlocation", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ export default function Signup() {
 
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/createuser",{
+        const response = await fetch("https://funfood-example.onrender.com/api/createuser",{
             method:"POST",
             headers:{
                 'Content-type':'application/json'
