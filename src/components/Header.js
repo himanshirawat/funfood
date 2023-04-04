@@ -37,7 +37,7 @@ export default function Header() {
 
               {(localStorage.getItem("authToken"))
                 ? <li className="nav-item">
-                  <Link className="nav-link active fs-6" aria-current="page" to="/">My Orders</Link>
+                  <Link className="nav-link active fs-6" aria-current="page" to="/myOrder">My Orders</Link>
                 </li>
                 : ""
               }
