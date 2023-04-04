@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = "https://funfood-example.onrender.com"
+const port = 5000
 const mongoconnect = require('./db')
 
 app.use((req,res,next)=>{
