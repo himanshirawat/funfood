@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Navbar } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
@@ -35,9 +36,12 @@ export default function Login() {
         setcredentials({ ...credentials, [event.target.name]: event.target.value })
     }
     return (
+        <div style={{backgroundImage: 'url("https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', height: '100vh', backgroundSize: 'cover' }}>
         <div>
+          <Navbar />
+        </div>
             <div className='container'>
-                <form onSubmit={handleSubmit}>
+                <form className='w-50 m-auto mt-5 border p-4 bg-light border-warning rounded' onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                         <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -47,8 +51,8 @@ export default function Login() {
                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                         <input type="password" className="form-control" onChange={onChange} name='password' value={credentials.password} id="exampleInputPassword1" />
                     </div>
-                    <button type="submit" className="m-3 btn btn-warning">Submit</button>
-                    <Link to="/createuser" className='m-3 btn btn-danger'>I'am new user</Link>
+                    <button type="submit" className="m-3 btn bg-warning">Submit</button>
+                    <Link to="/createuser" className='m-3 btn bg-danger'>I'am new user</Link>
 
                     
                 </form>

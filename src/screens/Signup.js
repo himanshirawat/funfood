@@ -75,7 +75,7 @@ export default function Signup() {
          <div style={{ backgroundImage: 'url("https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', backgroundSize: 'cover',height: '100vh' }}>
          <div><Header/></div>
         <div className='container'>
-            <form className='w-50 m-auto mt-5 border bg-light p-2 border-warning rounded' onSubmit={handleSubmit}>
+            <form className='w-50 m-auto mt-5 border bg-light p-4 border-warning rounded' onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">User Name</label>
                     <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange}/>
@@ -107,7 +107,6 @@ export default function Signup() {
 
                 <button type="submit" className="m-3 btn bg-warning">Submit</button>
                 <Link to="/login" className='m-3 btn bg-danger'>Already a user</Link>
-                <p className='fs-6'>*if you submit the deatils and page didn't render you so please try login directly and click Already a user</p>
             </form>
             </div>
             </div>
