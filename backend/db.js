@@ -19,7 +19,6 @@ const mongoconnect = async()=>{
                     // console.log(global.menu)
               })
             })
-
         }
     });
 }
