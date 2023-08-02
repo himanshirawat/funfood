@@ -4,7 +4,7 @@ const port = 5000 || process.env.PORT
 const mongoconnect = require('./db')
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'https://funfood.onrender.com/');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.header('Access-Control-Allow-Credentials','true');
@@ -12,7 +12,7 @@ app.use((req, res, next) => {
   if (req.method === 'OPTIONS'){
     return res.status(204).end();
   }
-  
+
   next();
 });
 
