@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoURI = 'mongodb+srv://himanshirawat604:himanshirawat604@cluster0.xog2sdk.mongodb.net/fooddelivery?retryWrites=true&w=majority'
 const mongoconnect = async()=>{
     await mongoose.connect(mongoURI,{useNewUrlParser : true },async(err,result)=>{
         if(err) console.log("--",err)
